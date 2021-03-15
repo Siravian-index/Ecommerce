@@ -65,6 +65,8 @@ router.post("/cart/products/delete", async (req, res) => {
 
     await CartsRepository.update(req.session.cartId, { items });
 
+    
+
     res.redirect("/cart")
 
 });
