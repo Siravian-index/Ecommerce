@@ -64,9 +64,7 @@ router.post("/cart/products/delete", async (req, res) => {
     const items = cart.items.filter(item => item.id !== itemId);
 
     await CartsRepository.update(req.session.cartId, { items });
-
     
-
     res.redirect("/cart")
 
 });
